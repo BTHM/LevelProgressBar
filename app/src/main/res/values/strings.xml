@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ProgressBarDemo</string>
+    <string name="start">开始</string>
+</resources>
