@@ -115,16 +115,21 @@ public class CreditProgressBar extends View {
 
     private void drawProgressBar(Canvas canvas) {
         Paint.FontMetricsInt fm = paintText.getFontMetricsInt();
-        int ascent = fm.ascent;
+        int ascent = fm.ascent;//测量字体高度
         int textY = startY - ascent + ToolUtils.dip2px(getContext(), 10);
-        for (int i = 1; i <= maxLength / section; i++) {
+        for (int i = 1; i <= maxLength / section; i++) {//有几个等级
+            //画对对应位置圆
             mPath.addCircle(startX + i * section, startY, radius, Path.Direction.CCW);
             paintText.setColor(getResources().getColor(R.color.color_da5f3c));
+            //画对应文字
             canvas.drawText(levelText[i], startX + i * section, textY, paintText);
         }
+        //path回到,出发点 然后画直线
+        mPath.reset();
         mPath.moveTo(startX, startY);
         mPath.lineTo(startX + maxLength, startY);
         canvas.drawPath(mPath, mPaintBg);
+        //默认
         progressPath.addCircle(startX, startY, radius, Path.Direction.CCW);
         canvas.drawPath(progressPath, mPaintProgress);
         paintText.setColor(getResources().getColor(R.color.color_fff2c1));

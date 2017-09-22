@@ -97,20 +97,15 @@ public class DrawArc extends View {
         if (startX + section - radius >= currentX) {
             mPath.lineTo(currentX, startY);
         }
-        if (startX + section - radius <= currentX) {//这里是范围
+        //if (startX + section - radius <= currentX) {//这里是范围
             RectF rectF = new RectF(startX + section - radius, startY - radius, startX + section + radius, startY + radius);
             int dia = radius * 2;
             int defAngle = (currentX - (startX + section - radius)) * 180 / dia;
             Log.d("tag", "currentX=" + currentX + "defAngle=" + defAngle);
             mPath.addArc(rectF, 180 - defAngle, defAngle * 2);
-        }
+       // }
         canvas.drawPath(mPath, mPaint);
     }
-
-
-
-
-
 
     private void startAnimation() {
         ValueAnimator valueAnimator = ValueAnimator.ofInt(startX, startX + section + radius);
@@ -121,7 +116,7 @@ public class DrawArc extends View {
                 invalidate();
             }
         });
-        valueAnimator.setDuration(5000);
+        valueAnimator.setDuration(10000);
         valueAnimator.start();
     }
 
