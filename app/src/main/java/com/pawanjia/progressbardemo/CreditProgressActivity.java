@@ -17,7 +17,7 @@ public class CreditProgressActivity extends AppCompatActivity {
 //        MyCountDownTimer myCountDownTimer = new MyCountDownTimer(4000, 1000);
 //        myCountDownTimer.start();
         CreditProgressBar pb = (CreditProgressBar) findViewById(R.id.pb);
-        pb.setMaxValue(18000).setProgress(18000);
+        pb.setMaxValue(18000).setProgress(10000);
 
     }
 }

@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".DrawActivity"></activity>
         <activity android:name=".LevelProgressActivity"></activity>
+        <activity android:name=".PayProgressActivity"></activity>
+
     </application>
 
 </manifest>

@@ -9,6 +9,13 @@ public class DrawActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_draw);
+        final ClinicLevelProgressBar pb = (ClinicLevelProgressBar) findViewById(R.id.pb);
+        pb.post(new Runnable() {
+            @Override
+            public void run() {
+                pb.setProgressLevel("2").setProgress(60000);
+            }
+        });
 
 
     }

@@ -4,7 +4,10 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <com.pawanjia.progressbardemo.DrawArc
-        android:layout_width="300dp"
-        android:layout_height="80dp"/>
+    <com.pawanjia.progressbardemo.ClinicLevelProgressBar
+        android:id="@+id/pb"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="240dp"
+        android:layout_height="8dp"/>
 </LinearLayout>
