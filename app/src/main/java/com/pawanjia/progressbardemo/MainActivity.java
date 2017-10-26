@@ -3,6 +3,7 @@ package com.pawanjia.progressbardemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -15,7 +16,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn2).setOnClickListener(this);
         findViewById(R.id.btn3).setOnClickListener(this);
         findViewById(R.id.btn4).setOnClickListener(this);
+        Log.d("tag","MainActivity"+"onCreate");
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("tag","MainActivity"+"onStart");
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("tag","MainActivity"+"onResume");
     }
 
     @Override
